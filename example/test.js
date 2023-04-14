@@ -1,6 +1,6 @@
 const { resolve } = require("path");
 
-const { generateFileBlockDigest } = require("../main");
+const { generateFileBlockDigest } = require("..");
 
 const run = async () => {
   const fileBlockDigest = await generateFileBlockDigest(
