@@ -4,7 +4,7 @@
 
 此版本使用[Emscripten](https://emscripten.org/index.html)将官方 C++ Demo 编译为了 wasm 代码，并可在 Node.js 中正常运行，得到正确的 sha 值。
 
-![img](https://wework.qpic.cn/wwpic/96231_Zl6gOI-1TG6WokZ_1657629301/0)
+![img](https://raw.githubusercontent.com/knockkk/file_block_digest_nodejs/main/example/upload.png)
 
 # 如何使用
 
@@ -40,14 +40,6 @@ run();
   "blockBase64": ["MTIzNDU2Nzg5MA0KMTIz...", "...", "..."]
 }
 ```
-
-# 限制
-
-1. **最大文件体积为`1G`**
-
-   Wasm 编译时指定了最大内存`INITIAL_MEMORY=1073741824`，即 1G。所以只支持小于 1G 的文件计算。如需上传更大体积的文件，可修改`cpp/build.sh`中的`INITIAL_MEMORY`参数后重新编译。
-
-2. ⚠️**未经严格测试请勿在正式环境使用**
 
 # 如何编译
 
